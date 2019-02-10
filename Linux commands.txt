@@ -1,0 +1,120 @@
+clear:	clears the window
+pwd: shows the path of where you are
+ls: 	list files
+ls -a: 	show hidden files
+ls -l: 	show details of files
+ls -la: show hidden files and details
+cd: change directory
+cd ..: go back one directory
+cd (no other command): goes to home
+mkdir (name): make a folder
+rmdir (name): remove a folder
+touch (file name): create file
+rm (file name): remove file
+cp (file) (new file): copy file to new file
+mv (file) (directory): moves file to a new location and deletes original
+mv (file) (new file): delete file and the new file exists
+grep (word) (file): search for the word in the file
+diff (file1) (file2):compare two files, shows the difference between them
+passwd: changes the password for the user
+(variable)=(name):stor information and store it in a variable
+echo (message): displays the message
+echo $variable: shows the placeholder for the variable
+info (command): shows info about a command, hit ctrl+z to exit
+ls > (file): creates a file with results of the command you typed in
+pwd >> (file) doesn't overwrite just get the results
+
+l: lists the contents
+directorys have a d:
+files have a -:
+every file can either read write or execute (r,w,x) sepearted into three groups 
+first group are permisions for owner, second are for group and last are for everyone else
+u - user
+g - group
+o - other people from outside world
+chmod (what group o+w Bacon): change permisions, outside world can read and write from file
+chmod (o-w Bacon): take permisions away
+chmod 754 Bacon: 7, 5, 4 represents the individual permissions for user, group and other
+chmod 754: users can read write and execute (7), group has 5 so read and execute, other has 4 so they can only read 
+
+4 - stands for give group ability to "read"
+2 - stands for give group ability to "write"
+1 - stands for give ability group to "exectute"
+0 - stands for "no permissions"
+7 - means combining numbers 4, 2, and 1 to make it 7
+chmod 777 Bacon means let everyone do what they want with the file
+//////////////////////////////////////////////////////////////////////////////
+a hash is a way to take data and turn it into a number
+checking to see if a file is corrupt or not
+sha1sum (filename): sha1sum is algorithim for hasing to see if a file is correct
+sha1sum (filename) | grep (hash from website): if its red it means it does match
+/////////////////////////////////////////////////////////////////////////////////////////
+compress and decrompress files and directories
+gzip (filename): compresses a file
+gunzip (compressedfile): decompresses the file
+c means create mode, v means display the output in the terminal, f means file options 
+tar cvf (new tar) (file1) (file2): 
+tar xvf (tar file): decompresses the tar file
+/////////////////////////////////////////////////////////////////////////
+apt (advanced package tool) is used to install packages from the internet
+sudo apt-get update: sudo means super user privelages, updating the tool
+java -version: gets the version of java and checks if its installed
+sudo apt-get install php5: super user privellages, installs php5
+bash phycharm.sh: runs the pycharm program using a shell script, desktop program
+///////////////////////////////////////////////////////////////////////
+users have restrictions on which files they can access, linux always has a super user named root
+that can do anything. You usually don't want to log in as root because you don't want to accidentally
+mess up system files. when you create a new user it creates a group of the same name
+sudo useradd (username): creates a user using supper user privellages
+sudo passwd (username): used to change the password for the user
+////////////////////////////////////////////////////////////////////////////
+groups are used to set privellages for an entire set of people
+sudo groupadd (groupname): add a group
+-a means add to another group, -G means add to another group, -g means remove from origninal group and add to new group
+sudo usermod -a -G (groupname) (user): usermod means modify user
+sudo userdel (user): deletes a user from a group
+///////////////////////////////////////////////////////////////////////////
+how to setup and connect to a ssh server, a server that's in another place in the world
+ssh root@(server ip address): connect to the computer using the user root
+///////////////////////////////////////////////////////////////////////////
+ssh key authentication
+private keys stay on own pesonal computer, public keys are on the server
+ssh-keygen -t rsa: generates public and private keys
+ssh-copy-id root@(server ip address): connects to the server using a key, you can connect to the server faster and in a safer way
+///////////////////////////////////////////////////////////////////////////////
+disable default password login
+ssh root@(server ip address): conncet to the server
+nano /etc/ssh/sshd_config: nano is program used to edit multiple lines of text at once
+look for the permit root login line
+delete yes and write without-password, hit ctrl+x to close, hit y to save
+reload ssh: restart the ssh to see the new changes
+ssh root@(server ip address): use to see if you can login
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
