@@ -89,6 +89,13 @@ look for the permit root login line
 delete yes and write without-password, hit ctrl+x to close, hit y to save
 reload ssh: restart the ssh to see the new changes
 ssh root@(server ip address): use to see if you can login
+////////////////////////////////////////////////////////////////////
+ how to compile a C program
+ create file called first.c
+ navigate to the directory
+ gcc -o test first.c // stores code in the file test
+ ./test
+ 
 
               
 
